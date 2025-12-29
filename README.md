@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Algorithm Battle Visualizer
 
-## Getting Started
+MIT OCWやPrincetonのアルゴリズム講義で学んだ概念を、React(Next.js)を用いて可視化したベンチマークツールです。
+単なる実装に留まらず、計算量の違いを「定量的」かつ「視覚的」に比較することを目的に開発しました。
 
-First, run the development server:
+## 🔗 Live Demo
+[https://algorithm-visualizer-three-jet.vercel.app/]
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🛠 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **リアルタイム並列比較**: 異なるアルゴリズムを同じデータセットで同時に走らせ、実行速度の差を視覚化。
+- **スケーラビリティ・テスト**: データ数を100個まで増やし、データ量が増加した際の計算量（Big O）の影響を実証。
+- **パフォーマンス計測**: 実行時間(ms)と、アルゴリズム内部での比較回数をカウントし、効率性を数値化。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧬 Implemented Algorithms
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Algorithm | Time Complexity | Strategy |
+| :--- | :--- | :--- |
+| **Bubble Sort** | $O(n^2)$ | Brute Force (隣接要素の入れ替え) |
+| **Merge Sort** | $O(n \log n)$ | Divide and Conquer (分割統治法) |
 
-## Learn More
+## 💡 Key Learnings (PM Perspective)
 
-To learn more about Next.js, take a look at the following resources:
+このプロジェクトを通じて、以下の技術的・PM的視点を学びました。
+- **技術選定**: 高速な開発とデプロイを実現するため、Next.js + Tailwind CSS + Vercel を採用。
+- **State管理**: Reactの `useState` を用いた動的なUI更新と、非同期処理（`async/await`）による実行ステップの制御。
+- **エンジニアリングワークフロー**: Gitによるバージョン管理と、GitHub/Vercelを連携させたCI/CDの構築。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠 Tech Stack
+- **Frontend**: React (Next.js), TypeScript
+- **Styling**: Tailwind CSS
+- **Deployment**: Vercel
